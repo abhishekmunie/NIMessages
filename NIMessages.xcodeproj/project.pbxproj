@@ -1,0 +1,429 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B8F7118819F6606100C2C0DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F7118719F6606100C2C0DB /* AppDelegate.swift */; };
+		B8F7118A19F6606100C2C0DB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F7118919F6606100C2C0DB /* ViewController.swift */; };
+		B8F7118D19F6606100C2C0DB /* NIMessages.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B8F7118B19F6606100C2C0DB /* NIMessages.xcdatamodeld */; };
+		B8F7118F19F6606100C2C0DB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8F7118E19F6606100C2C0DB /* Images.xcassets */; };
+		B8F7119219F6606100C2C0DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8F7119019F6606100C2C0DB /* Main.storyboard */; };
+		B8F7119E19F6606100C2C0DB /* NIMessagesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F7119D19F6606100C2C0DB /* NIMessagesTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B8F7119819F6606100C2C0DB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B8F7117A19F6606000C2C0DB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B8F7118119F6606000C2C0DB;
+			remoteInfo = NIMessages;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B8F7118219F6606100C2C0DB /* NIMessages.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NIMessages.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8F7118619F6606100C2C0DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B8F7118719F6606100C2C0DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B8F7118919F6606100C2C0DB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B8F7118C19F6606100C2C0DB /* NIMessages.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NIMessages.xcdatamodel; sourceTree = "<group>"; };
+		B8F7118E19F6606100C2C0DB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		B8F7119119F6606100C2C0DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B8F7119719F6606100C2C0DB /* NIMessagesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NIMessagesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8F7119C19F6606100C2C0DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B8F7119D19F6606100C2C0DB /* NIMessagesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NIMessagesTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B8F7117F19F6606000C2C0DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8F7119419F6606100C2C0DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B8F7117919F6606000C2C0DB = {
+			isa = PBXGroup;
+			children = (
+				B8F7118419F6606100C2C0DB /* NIMessages */,
+				B8F7119A19F6606100C2C0DB /* NIMessagesTests */,
+				B8F7118319F6606100C2C0DB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B8F7118319F6606100C2C0DB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B8F7118219F6606100C2C0DB /* NIMessages.app */,
+				B8F7119719F6606100C2C0DB /* NIMessagesTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B8F7118419F6606100C2C0DB /* NIMessages */ = {
+			isa = PBXGroup;
+			children = (
+				B8F7118719F6606100C2C0DB /* AppDelegate.swift */,
+				B8F7118919F6606100C2C0DB /* ViewController.swift */,
+				B8F7118E19F6606100C2C0DB /* Images.xcassets */,
+				B8F7119019F6606100C2C0DB /* Main.storyboard */,
+				B8F7118B19F6606100C2C0DB /* NIMessages.xcdatamodeld */,
+				B8F7118519F6606100C2C0DB /* Supporting Files */,
+			);
+			path = NIMessages;
+			sourceTree = "<group>";
+		};
+		B8F7118519F6606100C2C0DB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B8F7118619F6606100C2C0DB /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B8F7119A19F6606100C2C0DB /* NIMessagesTests */ = {
+			isa = PBXGroup;
+			children = (
+				B8F7119D19F6606100C2C0DB /* NIMessagesTests.swift */,
+				B8F7119B19F6606100C2C0DB /* Supporting Files */,
+			);
+			path = NIMessagesTests;
+			sourceTree = "<group>";
+		};
+		B8F7119B19F6606100C2C0DB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B8F7119C19F6606100C2C0DB /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B8F7118119F6606000C2C0DB /* NIMessages */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B8F711A119F6606100C2C0DB /* Build configuration list for PBXNativeTarget "NIMessages" */;
+			buildPhases = (
+				B8F7117E19F6606000C2C0DB /* Sources */,
+				B8F7117F19F6606000C2C0DB /* Frameworks */,
+				B8F7118019F6606000C2C0DB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NIMessages;
+			productName = NIMessages;
+			productReference = B8F7118219F6606100C2C0DB /* NIMessages.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B8F7119619F6606100C2C0DB /* NIMessagesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B8F711A419F6606100C2C0DB /* Build configuration list for PBXNativeTarget "NIMessagesTests" */;
+			buildPhases = (
+				B8F7119319F6606100C2C0DB /* Sources */,
+				B8F7119419F6606100C2C0DB /* Frameworks */,
+				B8F7119519F6606100C2C0DB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B8F7119919F6606100C2C0DB /* PBXTargetDependency */,
+			);
+			name = NIMessagesTests;
+			productName = NIMessagesTests;
+			productReference = B8F7119719F6606100C2C0DB /* NIMessagesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B8F7117A19F6606000C2C0DB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Abhishek Munie";
+				TargetAttributes = {
+					B8F7118119F6606000C2C0DB = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					B8F7119619F6606100C2C0DB = {
+						CreatedOnToolsVersion = 6.1;
+						TestTargetID = B8F7118119F6606000C2C0DB;
+					};
+				};
+			};
+			buildConfigurationList = B8F7117D19F6606000C2C0DB /* Build configuration list for PBXProject "NIMessages" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B8F7117919F6606000C2C0DB;
+			productRefGroup = B8F7118319F6606100C2C0DB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B8F7118119F6606000C2C0DB /* NIMessages */,
+				B8F7119619F6606100C2C0DB /* NIMessagesTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B8F7118019F6606000C2C0DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8F7118F19F6606100C2C0DB /* Images.xcassets in Resources */,
+				B8F7119219F6606100C2C0DB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8F7119519F6606100C2C0DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B8F7117E19F6606000C2C0DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8F7118A19F6606100C2C0DB /* ViewController.swift in Sources */,
+				B8F7118819F6606100C2C0DB /* AppDelegate.swift in Sources */,
+				B8F7118D19F6606100C2C0DB /* NIMessages.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8F7119319F6606100C2C0DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8F7119E19F6606100C2C0DB /* NIMessagesTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B8F7119919F6606100C2C0DB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B8F7118119F6606000C2C0DB /* NIMessages */;
+			targetProxy = B8F7119819F6606100C2C0DB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B8F7119019F6606100C2C0DB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B8F7119119F6606100C2C0DB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B8F7119F19F6606100C2C0DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B8F711A019F6606100C2C0DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		B8F711A219F6606100C2C0DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = NIMessages/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B8F711A319F6606100C2C0DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = NIMessages/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		B8F711A519F6606100C2C0DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = NIMessagesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NIMessages.app/Contents/MacOS/NIMessages";
+			};
+			name = Debug;
+		};
+		B8F711A619F6606100C2C0DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = NIMessagesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NIMessages.app/Contents/MacOS/NIMessages";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B8F7117D19F6606000C2C0DB /* Build configuration list for PBXProject "NIMessages" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B8F7119F19F6606100C2C0DB /* Debug */,
+				B8F711A019F6606100C2C0DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B8F711A119F6606100C2C0DB /* Build configuration list for PBXNativeTarget "NIMessages" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B8F711A219F6606100C2C0DB /* Debug */,
+				B8F711A319F6606100C2C0DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B8F711A419F6606100C2C0DB /* Build configuration list for PBXNativeTarget "NIMessagesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B8F711A519F6606100C2C0DB /* Debug */,
+				B8F711A619F6606100C2C0DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B8F7118B19F6606100C2C0DB /* NIMessages.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B8F7118C19F6606100C2C0DB /* NIMessages.xcdatamodel */,
+			);
+			currentVersion = B8F7118C19F6606100C2C0DB /* NIMessages.xcdatamodel */;
+			path = NIMessages.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = B8F7117A19F6606000C2C0DB /* Project object */;
+}
