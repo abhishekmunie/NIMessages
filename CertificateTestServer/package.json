@@ -1,0 +1,30 @@
+{
+  "name": "certServ",
+  "description": "",
+  "keywords": [
+    "cert"
+  ],
+  "authors": [
+    {
+      "name": "Abhishek Munie",
+      "email": "contact@abhishekmunie.com"
+    }
+  ],
+  "version": "0.1.1",
+  "engines": {
+    "node": "0.10.30"
+  },
+  "dependencies": {
+    "body-parser": "^1.9.2",
+    "errorhandler": "^1.2.2",
+    "express": "^4.10.1",
+    "morgan": "^1.5.0",
+    "node-openssl-p12": "^0.1.8",
+    "pem": "^1.4.1",
+    "serve-favicon": "^2.1.6"
+  },
+  "main": "server.js",
+  "devDependencies": {
+    "NodObjC": "^1.0.0"
+  }
+}

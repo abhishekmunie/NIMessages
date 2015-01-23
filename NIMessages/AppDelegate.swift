@@ -8,18 +8,65 @@
 
 import Cocoa
 
+let AM0NIMessagesUserIDKey: String! = "com.abhishekmunie.nimsgsimuid"
+let AM0NIMessagesNetServiceType: String! = "_am0nimsgpeer._tcp."
+let MyErrorDomain: String = "com.abhishekmunie.ni"
+
+let appDelegate: AppDelegate = {
+    return NSApplication.sharedApplication().delegate as AppDelegate
+    }()
+let ManagedObjectContext: NSManagedObjectContext = { return appDelegate.managedObjectContext! }()
+let netIDHandler: NetIDHandler = { return appDelegate.netIDHandler! }()
+let MyPeerObject: Peer = { return appDelegate.peerObject! }()
+let rootCertificate: SecCertificate = { return appDelegate.rootCertificate! }()
+let secIdentity: SecIdentity = { return appDelegate.secIdentity! }()
+
+//let MainStoreType = NSXMLStoreType
+let MainStoreType = NSInMemoryStoreType
+
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
 
+    var netIDHandler: NetIDHandler?
+    var appNetIDHandlerDelegate: AppNetIDHandlerDelegate?
+    var peerObject: Peer?
+    
+    var rootCertificate: SecCertificate?
+    var secIdentity: SecIdentity?
 
     func applicationDidFinishLaunching(aNotification: NSNotification) {
         // Insert code here to initialize your application
+        let rootCertificate = importCertificateWithResourceName("NetIdentityCA")!
+        self.rootCertificate = rootCertificate
+        println("Root Certificate: \(rootCertificate)")
+        
+        let status = addCertificate(rootCertificate)
+        if (status == noErr) || (status == errSecDuplicateItem) {
+            println("Root Certificate Added.")
+        } else {
+            println("Failed to add Root Certificate.")
+        }
+
+        let PKCS12Items = importPKCS12WithResourceName(AppConfig.identityResourceName)
+        self.secIdentity = (PKCS12Items?[0][SecImportItemIdentityKey] as SecIdentity)
+        println("Sec Identity: \(secIdentity)")
+//        let certChain = tomPKCS12Items![0][SecImportItemCertChainKey] as [SecCertificate]
+        let netID = NetID(secIdentity: secIdentity!)!
+        println("Net ID: \(netID)")
+        self.netIDHandler = NetIDHandler(netID: netID, discoveryInfo: [:], serviceType: AM0NIMessagesNetServiceType)
+        self.appNetIDHandlerDelegate = AppNetIDHandlerDelegate()
+        self.netIDHandler?.delegate = self.appNetIDHandlerDelegate
+        self.netIDHandler?.start()
+        self.peerObject = Peer.peerWithNetID(netID, inManagedObjectContext: ManagedObjectContext)
     }
 
     func applicationWillTerminate(aNotification: NSNotification) {
         // Insert code here to tear down your application
+        self.netIDHandler?.stop()
     }
+    
+    func applicationShouldTerminateAfterLastWindowClosed(theApplication: NSApplication) -> Bool { return true }
 
     // MARK: - Core Data stack
 
@@ -55,12 +102,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             fileManager.createDirectoryAtPath(self.applicationDocumentsDirectory.path!, withIntermediateDirectories: true, attributes: nil, error: &error)
         }
         
+        // TODO: - NSFileProtectionKey
         // Create the coordinator and store
         var coordinator: NSPersistentStoreCoordinator?
         if !shouldFail && (error == nil) {
             coordinator = NSPersistentStoreCoordinator(managedObjectModel: self.managedObjectModel)
-            let url = self.applicationDocumentsDirectory.URLByAppendingPathComponent("NIMessages.storedata")
-            if coordinator!.addPersistentStoreWithType(NSXMLStoreType, configuration: nil, URL: url, options: nil, error: &error) == nil {
+            let url = self.applicationDocumentsDirectory.URLByAppendingPathComponent(AppConfig.storeFileName)
+            if coordinator!.addPersistentStoreWithType(MainStoreType, configuration: nil, URL: url, options: nil, error: &error) == nil {
                 coordinator = nil
             }
         }
@@ -73,7 +121,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             if error != nil {
                 dict[NSUnderlyingErrorKey] = error
             }
-            error = NSError(domain: "YOUR_ERROR_DOMAIN", code: 9999, userInfo: dict)
+            error = NSError(domain: MyErrorDomain, code: 9999, userInfo: dict)
             NSApplication.sharedApplication().presentError(error!)
             return nil
         } else {
@@ -98,7 +146,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // Performs the save action for the application, which is to send the save: message to the application's managed object context. Any encountered errors are presented to the user.
         if let moc = self.managedObjectContext {
             if !moc.commitEditing() {
-                NSLog("\(NSStringFromClass(self.dynamicType)) unable to commit editing before saving")
+                println("\(NSStringFromClass(self.dynamicType)) unable to commit editing before saving")
             }
             var error: NSError? = nil
             if moc.hasChanges && !moc.save(&error) {
@@ -121,7 +169,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         if let moc = managedObjectContext {
             if !moc.commitEditing() {
-                NSLog("\(NSStringFromClass(self.dynamicType)) unable to commit editing to terminate")
+                println("\(NSStringFromClass(self.dynamicType)) unable to commit editing to terminate")
                 return .TerminateCancel
             }
             

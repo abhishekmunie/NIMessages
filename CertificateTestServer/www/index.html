@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>    <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>     <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>     <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Identity Server</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap-theme.css">
+    <link rel="stylesheet" href="/bower_components/fontawesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="/bower_components/modernizr/modernizr.js"></script>
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <div class="container">
+
+      <!-- Static navbar -->
+      <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Identity Server</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="/"><i class="fa fa-home fa-fw"></i>&nbsp; Home</a></li>
+              <li><a href="#">Support</a></li>
+            </ul>
+            <!-- <ul class="nav navbar-nav navbar-right">
+              <li class="active"><a href="./">Default</a></li>
+            </ul> -->
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+        <h1>Identity Generator</h1>
+        <p>Enter yor details to generate your identity for use with NIMessages.</p>
+      </div>
+
+      <form action="/generate/identity" method="POST" class="form-horizontal" role="form">
+        <div class="form-group">
+          <label for="inputName" class="col-sm-offset-1 col-sm-2 control-label">Name</label>
+          <div class="col-sm-7">
+            <div class="input-group margin-bottom-sm">
+              <span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>
+              <input type="text" class="form-control" name="name" id="inputName" placeholder="e.g. Abhishek Munie">
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputEmail" class="col-sm-offset-1 col-sm-2 control-label">Email</label>
+          <div class="col-sm-7">
+            <div class="input-group margin-bottom-sm">
+              <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
+              <input type="email" class="form-control" name="email" id="inputEmail" placeholder="e.g. contact@abhishekmunie.com">
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputPass" class="col-sm-offset-1 col-sm-2 control-label">Password</label>
+          <div class="col-sm-7">
+            <div class="input-group margin-bottom-sm">
+              <span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
+              <input type="password" class="form-control" name="pass" id="inputPass" placeholder="">
+            </div>
+            <span class="help-block small">Use this password to open the identity file.</span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputBitSize" class="col-sm-offset-1 col-sm-2 control-label">Bit Size</label>
+          <div class="col-sm-7">
+            <div class="input-group margin-bottom-sm">
+              <span class="input-group-addon"><i class="fa fa-lock fa-fw"></i></span>
+              <select id="inputBitSize" class="form-control" name="bitSize">
+                <option value="4096">Very High Grade</option>
+                <option value="2048">High Grade</option>
+                <option value="1024">Medium Grade</option>
+                <option value="512">Low Grade</option>
+              </select>
+              <!-- <keygen class="form-control" name="key"> -->
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-offset-3 col-sm-7">
+            <button type="submit" class="btn btn-primary"><i class="fa fa-certificate fa-lg fa-fw"></i> Generate</button>
+          </div>
+        </div>
+      </form>
+
+    </div>
+
+
+    <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='//www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-XXXXX-X');ga('send','pageview');
+    </script>
+  </body>
+</html>

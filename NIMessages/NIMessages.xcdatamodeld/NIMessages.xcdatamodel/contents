@@ -1,4 +1,33 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="untitled.xcdatamodel" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <elements/>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6252" systemVersion="14A389" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Conversation" representedClassName="Conversation" syncable="YES">
+        <attribute name="available" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <relationship name="messages" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Message" inverseName="conversation" inverseEntity="Message" syncable="YES"/>
+        <relationship name="peer" maxCount="1" deletionRule="Nullify" destinationEntity="Peer" inverseName="conversation" inverseEntity="Peer" syncable="YES"/>
+    </entity>
+    <entity name="Message" representedClassName="Message" syncable="YES">
+        <attribute name="date" attributeType="Date" syncable="YES"/>
+        <attribute name="delivered" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="extensions" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="read" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="conversation" maxCount="1" deletionRule="Nullify" destinationEntity="Conversation" inverseName="messages" inverseEntity="Conversation" syncable="YES"/>
+        <relationship name="sender" maxCount="1" deletionRule="Nullify" destinationEntity="Peer" inverseName="sentMessages" inverseEntity="Peer" syncable="YES"/>
+    </entity>
+    <entity name="Peer" representedClassName="Peer" syncable="YES">
+        <attribute name="available" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <attribute name="circularImage" optional="YES" transient="YES" attributeType="Transformable" valueTransformerName="NSImageToNSDataTransformer" syncable="YES"/>
+        <attribute name="identity" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="image" optional="YES" transient="YES" attributeType="Transformable" valueTransformerName="NSImageToNSDataTransformer" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="conversation" maxCount="1" deletionRule="Cascade" destinationEntity="Conversation" inverseName="peer" inverseEntity="Conversation" syncable="YES"/>
+        <relationship name="sentMessages" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Message" inverseName="sender" inverseEntity="Message" syncable="YES"/>
+    </entity>
+    <fetchRequest name="allConversations" entity="Conversation"/>
+    <fetchRequest name="availableConversations" entity="Conversation" predicateString="peer.available == 1"/>
+    <elements>
+        <element name="Conversation" positionX="-36" positionY="9" width="128" height="90"/>
+        <element name="Message" positionX="-63" positionY="-18" width="128" height="150"/>
+        <element name="Peer" positionX="-54" positionY="-9" width="128" height="150"/>
+    </elements>
 </model>
