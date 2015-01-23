@@ -1,0 +1,11 @@
+# NIMessages
+Bonjour bases Local Network Messaging App
+
+#￼Abstract
+As consumer web technologies and enterprise race towards cloud based infrastructure, there is a curious counter movement towards connected devices over infrastructure local networks and ad-hoc networks. As Internet still remains costly, slow and unreliable in many developing countries and rural area, network of inter-connected devices are cheep and faster means for people in a region or community to share information among them. In this age of mobile computing, a lot of apps allow people to collaborate in real-time. However, most of these technologies either depend on Internet or some kind of dedicated infrastructure on the local networks, making it not suitable for developing parts of the world.
+
+Networking technologies like multicast-DNS and DNS Service Discovery, provided in easy to use frameworks like Apple Bonjour, help develop apps that can network interconnected devices, and easily find services and peer on the network. However, in this world threatened by cyber crimes and privacy issues, it is important to have an authentication and encryption layer in these networks, which can work offline. Moreover, it is import to consider the influence of social networks on our society, which provides an existing network of friends and trusted people we would share information with.
+
+This project aims to provide a framework, which works on top of existing technologies like Zero-configuration networking and Multipeer Connectivity, and provides an authentication & encryption layer using popular social networks for identifying people that once setup can link people on network even in the absence of a dedicated central authority for authentication. The framework would be accompanied by a web service for generating identity certificates after authentication with social networks, which can be used for offline verification using mechanisms similar to X.509 standards. These certificates will further be use for exchanging symmetric key for encrypting the information being shared.
+
+Once setup, using the web service, the devices would be able to directly communicate which other devices using the same protocol, based on identities approved by both end users, without any dedicated network infrastructure.
